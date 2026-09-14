@@ -9,6 +9,7 @@ import ac.grim.grimac.checks.impl.aim.AimDuplicateLook;
 import ac.grim.grimac.checks.impl.aim.AimModulo360;
 import ac.grim.grimac.checks.impl.aim.processor.AimProcessor;
 import ac.grim.grimac.checks.impl.badpackets.*;
+import ac.grim.grimac.checks.impl.baritone.Baritone;
 import ac.grim.grimac.checks.impl.breaking.*;
 import ac.grim.grimac.checks.impl.chat.ChatA;
 import ac.grim.grimac.checks.impl.chat.ChatB;
