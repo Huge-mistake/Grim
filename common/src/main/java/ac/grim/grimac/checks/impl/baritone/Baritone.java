@@ -25,7 +25,7 @@ public class Baritone extends Check implements RotationListener {
         final float deltaPitch = Math.abs(rotationUpdate.newPitch() - rotationUpdate.oldPitch());
 
         // Baritone works with small degrees, limit to 1 degree to pick up on baritone slightly moving aim to bypass anticheats
-        if (rotationUpdate.deltaYaw() == 0 && deltaPitch > 0 && deltaPitch < 1 && Math.abs(rotationUpdate.newPitch()) != 90.0f) {
+        if (Math.abs(rotationUpdate.deltaYaw()) < 0.01f && deltaPitch > 0 && deltaPitch < 1 && Math.abs(rotationUpdate.newPitch()) != 90.0f) {
             AimProcessor processor = player.checkManager.get(AimProcessor.class);
             if (processor.divisorPitch < GrimMath.MINIMUM_DIVISOR) {
                 verbose++;
